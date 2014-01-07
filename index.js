@@ -2,19 +2,19 @@
 // Software Circuit Description Language (SCDL).
 // These 
 
-module.exports.Scdl = require('./dist/node/scdl')
-module.exports.ScdlSemanticBindings = require('./dist/node/scdl-semantic-bindings')
-module.exports.ScdlCatalogue = require('./dist/node/scdl-catalogue')
-module.exports.ScdlSpecification = require('./dist/node/scdl-specification')
-module.exports.ScdlSystem = require('./dist/node/scdl-system')
-module.exports.ScdlSocket = require('./dist/node/scdl-socket')
-module.exports.ScdlContract = require('./dist/node/scdl-contract')
-module.exports.ScdlMachine = require('./dist/node/scdl-machine')
-module.exports.ScdlType = require('./dist/node/scdl-type')
-module.exports.ScdlPerson = require('./dist/node/scdl-person')
-module.exports.ScdlOrganization = require('./dist/node/scdl-organization')
-module.exports.ScdlCopyright = require('./dist/node/scdl-copyright')
-module.exports.ScdlLicense = require('./dist/node/scdl-license')
+module.exports.DataModel = require('./dist/node/scdl')
+module.exports.SemanticBindings = require('./dist/node/scdl-semantic-bindings')
+module.exports.Catalogue = require('./dist/node/scdl-catalogue')
+module.exports.Specification = require('./dist/node/scdl-specification')
+module.exports.System = require('./dist/node/scdl-system')
+module.exports.Socket = require('./dist/node/scdl-socket')
+module.exports.Contract = require('./dist/node/scdl-contract')
+module.exports.Machine = require('./dist/node/scdl-machine')
+module.exports.Type = require('./dist/node/scdl-type')
+module.exports.Person = require('./dist/node/scdl-person')
+module.exports.Organization = require('./dist/node/scdl-organization')
+module.exports.Copyright = require('./dist/node/scdl-copyright')
+module.exports.License = require('./dist/node/scdl-license')
 
 
 
