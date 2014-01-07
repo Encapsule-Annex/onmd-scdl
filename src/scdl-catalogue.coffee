@@ -1,7 +1,7 @@
 
 util = require('onm').util
 
-module.exports.ScdlCatalogue = {
+module.exports = {
 
     namespaceType: "component"
     jsonTag: "catalogue"

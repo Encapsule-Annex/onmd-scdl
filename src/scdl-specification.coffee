@@ -1,12 +1,12 @@
+onmutil = require('onm').util
 
-
-module.exports.ScdlSpecification = {
+module.exports = {
     namespaceType: "component"                                                                             
     jsonTag: "specification"
     ____label: "Specification"
     ____description: "SCDL specification."
     namespaceProperties: {
-        userImmutable:  Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+        userImmutable:  require('./scdl-common-properties').CommonProperties
         userMutable: {
             name: {
                 ____type: "string"
@@ -23,22 +23,22 @@ module.exports.ScdlSpecification = {
             author: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.people"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onmutil.uuidNull
             }
             organization: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.organizations"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onmutil.uuidNull
             }
             copyright: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.copyrights"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onmutil.uuidNull
             }
             license: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.licenses"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onmutil.uuidNull
             }
         }
     }
@@ -54,7 +54,7 @@ module.exports.ScdlSpecification = {
                 ____label: "System Instance"
                 ____description: "SCDL system model instance."
                 namespaceProperties: {
-                    userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties 
+                    userImmutable: require('./scdl-common-properties').CommonProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -71,17 +71,17 @@ module.exports.ScdlSpecification = {
                         uuidModel: {
                             ____type: "uuidSelection"
                             ____selectionSource: "schema.catalogues.catalogue.models.systems"
-                            fnCreate: ->  Encapsule.code.lib.util.uuidNull
+                            fnCreate: ->  onmutil.uuidNull
                         }
                         author: {
                             ____type: "uuidSelection"
                             ____selectionSource: "schema.catalogues.catalogue.assets.people"
-                            fnCreate: -> Encapsule.code.lib.util.uuidNull
+                            fnCreate: -> onmutil.uuidNull
                         }
                         organization: {
                             ____type: "uuidSelection"
                             ____selectionSource: "schema.catalogues.catalogue.assets.organizations"
-                            fnCreate: -> Encapsule.code.lib.util.uuidNull
+                            fnCreate: -> onmutil.uuidNull
                         }
                     }
                 }
@@ -97,7 +97,7 @@ module.exports.ScdlSpecification = {
                             ____label: "Socket Instance"
                             ____description: "SCDL socket model instance."
                             namespaceProperties: {
-                                userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+                                userImmutable: require('./scdl-common-properties').CommonProperties
                                 userMutable: {
                                     name: {
                                         ____type: "string"
@@ -114,17 +114,17 @@ module.exports.ScdlSpecification = {
                                     uuidModel: {
                                         ____type: "uuidSelection"
                                         ____selectionSource: "schema.catalogues.catalogue.models.sockets"
-                                        fnCreate: ->  Encapsule.code.lib.util.uuidNull
+                                        fnCreate: ->  onmutil.uuidNull
                                     }
                                     author: {
                                         ____type: "uuidSelection"
                                         ____selectionSource: "schema.catalogues.catalogue.assets.people"
-                                        fnCreate: -> Encapsule.code.lib.util.uuidNull
+                                        fnCreate: -> onmutil.uuidNull
                                     }
                                     organization: {
                                         ____type: "uuidSelection"
                                         ____selectionSource: "schema.catalogues.catalogue.assets.organizations"
-                                        fnCreate: -> Encapsule.code.lib.util.uuidNull
+                                        fnCreate: -> onmutil.uuidNull
                                     }
                                 }
                             }
@@ -140,7 +140,7 @@ module.exports.ScdlSpecification = {
                                         ____label: "Instance Binding"
                                         ____description: "SCDL socket model instance binding."
                                         namespaceProperties: {
-                                            userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+                                            userImmutable: require('./scdl-common-properties').CommonProperties
                                             userMutable: {
                                                 name: {
                                                     ____type: "string"
@@ -157,17 +157,17 @@ module.exports.ScdlSpecification = {
                                                 uuidModel: {
                                                     ____type: "uuidSelection"
                                                     ____selectionSource: "schema.catalogues.catalogue.models.sockets"
-                                                    fnCreate: ->  Encapsule.code.lib.util.uuidNull
+                                                    fnCreate: ->  onmutil.uuidNull
                                                 }
                                                 author: {
                                                     ____type: "uuidSelection"
                                                     ____selectionSource: "schema.catalogues.catalogue.assets.people"
-                                                    fnCreate: -> Encapsule.code.lib.util.uuidNull
+                                                    fnCreate: -> onmutil.uuidNull
                                                 }
                                                 organization: {
                                                     ____type: "uuidSelection"
                                                     ____selectionSource: "schema.catalogues.catalogue.assets.organizations"
-                                                    fnCreate: -> Encapsule.code.lib.util.uuidNull
+                                                    fnCreate: -> onmutil.uuidNull
                                                 }
                                             }
                                         } # namespaceProperties

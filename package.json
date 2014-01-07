@@ -1,6 +1,6 @@
 {
   "name": "onmd-scdl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Software Circuit Description Language (SCDL) onm data model declaration.",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Encapsule/onmd-scdl",
   "dependencies": {
-    "onm": "~0.1.5",
+    "onm": "~0.1.7",
     "node-uuid": "~1.4.1"
   },
   "devDependencies": {

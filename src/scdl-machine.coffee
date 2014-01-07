@@ -1,17 +1,20 @@
+onm = require('onm')
+common = require('./scdl-common-properties')
+pins = require('./scdl-pins')
 
-module.exports.ScdlMachine = {
+module.exports = {
     namespaceType: "component"
     jsonTag: "machine"
     ____label: "Machine"
     ____description: "SCDL machine model."
     namespaceProperties: {
-        userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
-        userMutable: Encapsule.code.app.ONMjs.ScdlModelUserMutableNamespaceProperties 
+        userImmutable: common.ImmutableProperties
+        userMutable: common.MutableProperties
     } # namespaceProperties
 
     subNamespaces: [
-        Encapsule.code.app.ONMjs.SchemaAppDataInputPins
-        Encapsule.code.app.ONMjs.SchemaAppDataOutputPins
+        pins.InputPins
+        pins.OutputPins
         {
             namespaceType: "extensionPoint"
             jsonTag: "states"
@@ -23,7 +26,7 @@ module.exports.ScdlMachine = {
                 ____label: "State"
                 ____description: "SCDL state descriptor."
                 namespaceProperties: {
-                    userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+                    userImmutable: common.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -60,7 +63,7 @@ module.exports.ScdlMachine = {
                             ____label: "Transition"
                             ____description: "SCDL state transition descriptor."
                             namespaceProperties: {
-                                userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+                                userImmutable: common.ImmutableProperties
                                 userMutable: {
                                     name: {
                                         ____type: "string"
@@ -77,7 +80,7 @@ module.exports.ScdlMachine = {
                                     finalState: {
                                         ____type: "uuidSelection"
                                         ____selectionSource: "schema.catalogues.catalogue.models.machines.machine.states"
-                                        fnCreate: -> Encapsule.code.lib.util.uuidNull
+                                        fnCreate: -> onm.util.uuidNull
                                     }
                                     vectorExpression: {
                                         ____type: "string"

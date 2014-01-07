@@ -1,12 +1,14 @@
 
-module.exports.ScdlContract = {
+common = require('./scdl-common-properties')
+
+module.exports = {
     namespaceType: "component"
     jsonTag: "contract"
     ____label: "Contract"
     ____description: "SCDL contract model."
     namespaceProperties: {
-        userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
-        userMutable: Encapsule.code.app.ONMjs.ScdlModelUserMutableNamespaceProperties
+        userImmutable: common.ImmutableProperties
+        userMutable: common.MutableProperties
     } # namespaceProperties
 
     subNamespaces: [
@@ -25,7 +27,7 @@ module.exports.ScdlContract = {
         } # modelReference
 
         # Easy to miss this slipped in down here.
-        Encapsule.code.app.ONMjs.SchemaAppDataNodes
+        require('./scdl-nodes').Nodes
 
     ] # Socket Contract submenus
 

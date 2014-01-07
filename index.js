@@ -1,4 +1,9 @@
+// Data model declaration for Encapsule Project's
+// Software Circuit Description Language (SCDL).
+// These 
 
+module.exports.Scdl = require('./dist/node/scdl')
+module.exports.ScdlSemanticBindings = require('./dist/node/scdl-semantic-bindings')
 module.exports.ScdlCatalogue = require('./dist/node/scdl-catalogue')
 module.exports.ScdlSpecification = require('./dist/node/scdl-specification')
 module.exports.ScdlSystem = require('./dist/node/scdl-system')

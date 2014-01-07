@@ -8,6 +8,8 @@ module.exports = (grunt) ->
         coffee:
             debug:
                 files:
+                    'dist/node/scdl.js': 'src/scdl.coffee'
+                    'dist/node/scdl-semantic-bindings.js': 'src/scdl-semantic-bindings.coffee'
                     'dist/node/scdl-catalogue.js': 'src/scdl-catalogue.coffee'
                     'dist/node/scdl-common-properties.js': 'src/scdl-common-properties.coffee'
                     'dist/node/scdl-specification.js': 'src/scdl-specification.coffee'
@@ -16,6 +18,8 @@ module.exports = (grunt) ->
                     'dist/node/scdl-contract.js': 'src/scdl-contract.coffee'
                     'dist/node/scdl-machine.js': 'src/scdl-machine.coffee'
                     'dist/node/scdl-type.js': 'src/scdl-type.coffee'
+                    'dist/node/scdl-pins.js': 'src/scdl-pins.coffee'
+                    'dist/node/scdl-nodes.js': 'src/scdl-nodes.coffee'
                     'dist/node/scdl-person.js': 'src/scdl-person.coffee'
                     'dist/node/scdl-organization.js': 'src/scdl-person.coffee'
                     'dist/node/scdl-copyright.js': 'src/scdl-copyright.coffee'

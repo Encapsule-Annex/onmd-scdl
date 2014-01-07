@@ -1,10 +1,11 @@
+common = require('./scdl-common-properties')
 
-module.exports.ScdlCopyright = {
+module.exports = {
     namespaceType: "component"
     jsonTag: "copyright"
     ____label: "Copyright"
     ____description: "SCDL copyright model."
     namespaceProperties: {
-        userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+        userImmutable: common.ImmutableProperties
     }
 }

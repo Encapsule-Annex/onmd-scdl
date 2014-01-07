@@ -1,11 +1,14 @@
 
-module.exports.ScdlType = {
+onm = require('onm')
+common = require('./scdl-common-properties')
+
+module.exports = {
     namespaceType: "component"                                                                    
     jsonTag: "type"
     ____label: "Type"
     ____description: "SCDL type model."
     namespaceProperties: {
-        userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+        userImmutable: common.ImmutableProperties
         userMutable: {
             name: {
                 ____type: "string"
@@ -22,26 +25,26 @@ module.exports.ScdlType = {
             author: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.people"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onm.util.uuidNull
             }
             organization: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.organizations"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onm.util.uuidNull
             }
             copyright: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.copyrights"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onm.util.uuidNull
             }
             license: {
                 ____type: "uuidSelection"
                 ____selectionSource: "schema.catalogues.catalogue.assets.licenses"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onm.util.uuidNull
             }
             platformBinding: {
                 ____type: "uuid"
-                fnCreate: -> Encapsule.code.lib.util.uuidNull
+                fnCreate: -> onm.util.uuidNull
             }
         } # type userMutable
     } # type namespaceDescriptor

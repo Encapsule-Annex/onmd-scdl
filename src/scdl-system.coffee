@@ -1,17 +1,24 @@
 
-module.exports.ScdlSystem = {
+onm = require('onm')
+common = require('./scdl-common-properties')
+
+pins = require('./scdl-pins')
+
+
+module.exports = {
     namespaceType: "component"
     jsonTag: "system"
     ____label: "System"
     ____description: "SCDL system model."
     namespaceProperties: {
-        userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
-        userMutable: Encapsule.code.app.ONMjs.ScdlModelUserMutableNamespaceProperties 
+        userImmutable: common.ImmutableProperties
+        userMutable: common.MutableProperties
     }
 
     subNamespaces: [
-        Encapsule.code.app.ONMjs.SchemaAppDataInputPins
-        Encapsule.code.app.ONMjs.SchemaAppDataOutputPins
+        pins.InputPins
+        pins.OutputPins
+
 
         { 
             namespaceType: "extensionPoint"
@@ -24,7 +31,7 @@ module.exports.ScdlSystem = {
                 ____label: "System Instance"
                 ____description: "Contained SCDL system instance."
                 namespaceProperties: {
-                    userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+                    userImmutable: common.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -41,7 +48,7 @@ module.exports.ScdlSystem = {
                         systemUuid : {
                             ____type: "uuidSelection"
                             ____selectionSource: "schema.catalogues.catalogue.models.systems"
-                            fnCreate: -> Encapsule.code.lib.util.uuidNull
+                            fnCreate: -> onm.util.uuidNull
                         }
                     } # userMutable
                 } # namespaceProperties
@@ -59,7 +66,7 @@ module.exports.ScdlSystem = {
                 ____label: "Machine Instance"
                 ____description: "SCDL machine instance."
                 namespaceProperties: {
-                    userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+                    userImmutable: common.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -76,7 +83,7 @@ module.exports.ScdlSystem = {
                         machineUuid : {
                             ____type: "uuidSelection"
                             ____selectionSource: "schema.catalogues.catalogue.models.systems"
-                            fnCreate: -> Encapsule.code.lib.util.uuidNull
+                            fnCreate: -> onm.util.uuidNull
                         }
                     } # userMutable
                 } # namespaceProperties
@@ -96,7 +103,7 @@ module.exports.ScdlSystem = {
                 ____label: "Socket Instance"
                 ____description: "SCDL socket instance."
                 namespaceProperties: {
-                    userImmutable: Encapsule.code.app.ONMjs.SchemaAppDataNamespaceCommonProperties
+                    userImmutable: common.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -113,14 +120,14 @@ module.exports.ScdlSystem = {
                         socketUuid : {
                             ____type: "uuidSelection"
                             ____selectionSource: "schema.catalogues.catalogue.models.systems"
-                            fnCreate: -> Encapsule.code.lib.util.uuidNull
+                            fnCreate: -> onm.util.uuid
                         }
                     } # userMutable
                 } # namespaceProperties
             } # subsystem archetype
         } # subsystems
 
-        Encapsule.code.app.ONMjs.SchemaAppDataNodes
+        require('./scdl-nodes').Nodes
 
     ] # system submenus
 } # Encapsule.code.app.ONMjs.SchemaAppDataSystemArchetype

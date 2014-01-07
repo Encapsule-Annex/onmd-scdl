@@ -3,7 +3,7 @@ uuid = require('node-uuid')
 onmutil = require('onm').util
 
 
-module.exports.CommonProperties = {
+module.exports.ImmutableProperties = {
     uuid: {
         ____type: "uuid"
         fnCreate: -> uuid.v4()
@@ -28,7 +28,7 @@ module.exports.CommonProperties = {
 
 
 
-Encapsule.code.app.ONMjs.ScdlModelUserMutableNamespaceProperties = {
+module.exports.MutableProperties = {
     name: {
         ____type: "string"
         fnCreate: -> ""
