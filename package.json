@@ -1,0 +1,40 @@
+{
+  "name": "onmd-scdl",
+  "version": "0.0.1",
+  "description": "Software Circuit Description Language (SCDL) onm data model declaration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Encapsule/onmd-scdl.git"
+  },
+  "keywords": [
+    "generative",
+    "meta",
+    "model",
+    "transform",
+    "dataflow",
+    "toolkit",
+    "onm"
+  ],
+  "author": "ChrisRus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Encapsule/onmd-scdl/issues"
+  },
+  "homepage": "https://github.com/Encapsule/onmd-scdl",
+  "dependencies": {
+    "onm": "~0.1.5",
+    "node-uuid": "~1.4.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.8.0",
+    "browserify": "~3.19.1",
+    "grunt-browserify": "~1.3.0",
+    "grunt-contrib-uglify": "~0.2.7"
+  }
+}
