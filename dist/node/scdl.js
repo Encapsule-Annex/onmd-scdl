@@ -1,4 +1,10 @@
 (function() {
+  var onm, uuid;
+
+  onm = require('onm');
+
+  uuid = require('node-uuid');
+
   module.exports = {
     namespaceType: "root",
     jsonTag: "scdl",
@@ -24,7 +30,7 @@
               fnCreate: function() {
                 return {
                   uuid: uuid.v4(),
-                  timeStart: Encapsule.code.lib.util.getEpochTime()
+                  timeStart: onm.util.getEpochTime()
                 };
               }
             }

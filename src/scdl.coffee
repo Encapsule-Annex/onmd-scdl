@@ -1,4 +1,7 @@
 
+onm = require('onm')
+uuid = require('node-uuid')
+
 module.exports = {
 
     namespaceType: "root"
@@ -25,7 +28,7 @@ module.exports = {
                         ____type: "object"
                         fnCreate: -> {
                             uuid: uuid.v4()
-                            timeStart: Encapsule.code.lib.util.getEpochTime()
+                            timeStart: onm.util.getEpochTime()
                         }
                     } # localSession
                 } # userImmutable

@@ -1,11 +1,17 @@
 (function() {
+  var onm, uuid;
+
+  onm = require('onm');
+
+  uuid = require('node-uuid');
+
   module.exports = {
     update: function(dataReference_) {
       if (dataReference_.revision != null) {
         dataReference_.revision++;
       }
       if (dataReference_.updateTime != null) {
-        dataReference_.updateTime = Encapsule.code.lib.util.getEpochTime();
+        dataReference_.updateTime = onm.util.getEpochTime();
       }
       if (dataReference_.uuidRevision != null) {
         dataReference_.uuidRevision = uuid.v4();

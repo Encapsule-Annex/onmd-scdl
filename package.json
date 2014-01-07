@@ -1,7 +1,7 @@
 {
   "name": "onmd-scdl",
-  "version": "0.0.2",
-  "description": "Software Circuit Description Language (SCDL) onm data model declaration.",
+  "version": "0.0.3",
+  "description": "An onm data model declaration for Soft Circuit Description Langauge (SCDL).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,13 +11,9 @@
     "url": "git://github.com/Encapsule/onmd-scdl.git"
   },
   "keywords": [
-    "generative",
-    "meta",
+    "onm",
+    "data",
     "model",
-    "transform",
-    "dataflow",
-    "toolkit",
-    "onm"
   ],
   "author": "ChrisRus",
   "license": "MIT",
@@ -26,8 +22,6 @@
   },
   "homepage": "https://github.com/Encapsule/onmd-scdl",
   "dependencies": {
-    "onm": "~0.1.7",
-    "node-uuid": "~1.4.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

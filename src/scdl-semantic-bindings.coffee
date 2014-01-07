@@ -1,11 +1,14 @@
 
+onm = require('onm')
+uuid = require('node-uuid')
+
 module.exports =
 
     update: (dataReference_) ->
         if dataReference_.revision?
             dataReference_.revision++
         if dataReference_.updateTime?
-            dataReference_.updateTime = Encapsule.code.lib.util.getEpochTime()
+            dataReference_.updateTime = onm.util.getEpochTime()
         if dataReference_.uuidRevision?
             dataReference_.uuidRevision = uuid.v4()
         return true
