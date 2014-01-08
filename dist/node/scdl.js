@@ -13,38 +13,11 @@
     semanticBindings: require('./scdl-semantic-bindings'),
     subNamespaces: [
       {
-        namespaceType: "child",
-        jsonTag: "client",
-        ____label: "Client",
-        ____description: "Client child namespace.",
-        namespaceProperties: {
-          userImmutable: {
-            clientDeployment: {
-              ____type: "uuid",
-              fnCreate: function() {
-                return uuid.v4();
-              }
-            },
-            localSession: {
-              ____type: "object",
-              fnCreate: function() {
-                return {
-                  uuid: uuid.v4(),
-                  timeStart: onm.util.getEpochTime()
-                };
-              }
-            }
-          }
-        },
-        subNamespaces: [
-          {
-            namespaceType: "extensionPoint",
-            jsonTag: "catalogues",
-            ____label: "Catalogues",
-            ____description: "SCDL catalogue object collection.",
-            componentArchetype: require('./scdl-catalogue')
-          }
-        ]
+        namespaceType: "extensionPoint",
+        jsonTag: "catalogues",
+        ____label: "Catalogues",
+        ____description: "SCDL catalogue object collection.",
+        componentArchetype: require('./scdl-catalogue')
       }
     ]
   };

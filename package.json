@@ -1,6 +1,6 @@
 {
   "name": "onmd-scdl",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An onm data model declaration for Soft Circuit Description Langauge (SCDL).",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "grunt-contrib-uglify": "~0.2.7"
   },
   "dependencies": {
-    "onm": "~0.1.7",
+    "onm": "~0.1.8",
     "node-uuid": "~1.4.1"
   }
 }
