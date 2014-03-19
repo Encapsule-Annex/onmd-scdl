@@ -14,7 +14,7 @@ module.exports.ImmutableProperties = {
     }
     revision: {
         ____type: "revision"
-        fnCreate: -> 0
+        defaultValue:  0
     }
     createTime: {
         ____type: "epochTime"
@@ -31,39 +31,39 @@ module.exports.ImmutableProperties = {
 module.exports.MutableProperties = {
     name: {
         ____type: "string"
-        fnCreate: -> ""
+        defaultValue: ""
     }
     description: {
         ____type: "string"
-        fnCreate: -> ""
+        defaultValue: ""
     }
     tags: {
         ____type: "stringCSV"
-        fnCreate: -> ""
+        defaultValue: ""
     }
     author: {
         ____type: "uuidSelection"
         ____selectionSource: "schema.catalogues.catalogue.assets.people"
-        fnCreate: -> onmutil.uuidNull
+        defaultValue:  onmutil.uuidNull
     }
     organization: {
         ____type: "uuidSelection"
         ____selectionSource: "schema.catalogues.catalogue.assets.organizations"
-        fnCreate: -> onmutil.uuidNull
+        defaultValue:  onmutil.uuidNull
     }
     copyright: {
         ____type: "uuidSelection"
         ____selectionSource: "schema.catalogues.catalogue.assets.copyrights"
-        fnCreate: -> onmutil.uuidNull
+        defaultValue:  onmutil.uuidNull
     }
     license: {
         ____type: "uuidSelection"
         ____selectionSource: "schema.catalogues.catalogue.assets.licenses"
-        fnCreate: -> onmutil.uuidNull
+        defaultValue:  onmutil.uuidNull
     }
     platformBinding: {
         ____type: "uuid"
         ____optional: true
-        fnCreate: -> undefined
+        defaultValue:  undefined
     }
 }

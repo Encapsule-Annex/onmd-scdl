@@ -20,9 +20,7 @@
     },
     revision: {
       ____type: "revision",
-      fnCreate: function() {
-        return 0;
-      }
+      defaultValue: 0
     },
     createTime: {
       ____type: "epochTime",
@@ -41,56 +39,40 @@
   module.exports.MutableProperties = {
     name: {
       ____type: "string",
-      fnCreate: function() {
-        return "";
-      }
+      defaultValue: ""
     },
     description: {
       ____type: "string",
-      fnCreate: function() {
-        return "";
-      }
+      defaultValue: ""
     },
     tags: {
       ____type: "stringCSV",
-      fnCreate: function() {
-        return "";
-      }
+      defaultValue: ""
     },
     author: {
       ____type: "uuidSelection",
       ____selectionSource: "schema.catalogues.catalogue.assets.people",
-      fnCreate: function() {
-        return onmutil.uuidNull;
-      }
+      defaultValue: onmutil.uuidNull
     },
     organization: {
       ____type: "uuidSelection",
       ____selectionSource: "schema.catalogues.catalogue.assets.organizations",
-      fnCreate: function() {
-        return onmutil.uuidNull;
-      }
+      defaultValue: onmutil.uuidNull
     },
     copyright: {
       ____type: "uuidSelection",
       ____selectionSource: "schema.catalogues.catalogue.assets.copyrights",
-      fnCreate: function() {
-        return onmutil.uuidNull;
-      }
+      defaultValue: onmutil.uuidNull
     },
     license: {
       ____type: "uuidSelection",
       ____selectionSource: "schema.catalogues.catalogue.assets.licenses",
-      fnCreate: function() {
-        return onmutil.uuidNull;
-      }
+      defaultValue: onmutil.uuidNull
     },
     platformBinding: {
       ____type: "uuid",
       ____optional: true,
-      fnCreate: function() {
-        return void 0;
-      }
+      defaultValue: void 0
     }
   };
 

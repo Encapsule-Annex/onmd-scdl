@@ -24,24 +24,12 @@ module.exports = (grunt) ->
                     'dist/node/scdl-organization.js': 'src/scdl-person.coffee'
                     'dist/node/scdl-copyright.js': 'src/scdl-copyright.coffee'
                     'dist/node/scdl-license.js': 'src/scdl-license.coffee'
-            releaseDistribution:
-                files:
-                    'dist/node/onmd-scdl.js': 'src/*.coffee'
 
         clean: [ 'dist' ]
-
-        browserify:
-            'dist/client/onmd-scdl.js': [ './index.js' ]
-
-
 
     grunt.initConfig configObject
 
     grunt.loadNpmTasks "grunt-contrib-coffee"
     grunt.loadNpmTasks "grunt-contrib-clean"
-    grunt.loadNpmTasks "grunt-browserify"
 
-    grunt.loadNpmTasks "grunt-contrib-uglify"
-
-
-    grunt.registerTask "default", [ "clean", "coffee:debug", "browserify" ]
+    grunt.registerTask "default", [ "clean", "coffee:debug" ]

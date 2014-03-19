@@ -1,32 +1,53 @@
 
+onmutil = require('onm').util
 common = require('./scdl-common-properties')
-pins = require('./scdl-pins')
 
 Node = {
     namespaceType: "component"
     jsonTag: "node"
     ____label: "Node"
     ____description: "SCDL node object."
-    namespaceProperties: {
+
+    namespaceProperties:
         userImmutable: common.ImmutableProperties
-        userMutable: {
-            name: {
-                ____type: "string"
-                fnCreate: -> ""
-            }
-            description: {
-                ____type: "string"
-                fnCreate: -> ""
-            }
-            tags: {
-                ____type: "stringCSV"
-                fnCreate: -> ""
-            }
-        } # user mutable
-    } # node namespaceProperties
+
     subNamespaces: [
-        pins.OutputPinChild
-        pins.InputPins
+        {
+            namespaceType: "child"
+            jsonTag: "outputPinInstance"
+            ____label: "Output Pin Instance"
+            ____description: "Output pin instance identifier pair."
+            namespaceProperties:
+                userMutable:
+                    systemInstanceUuid:
+                        ____type: "uuid"
+                        defaultValue: onmutil.uuidNull
+                    pinInstanceUuid:
+                        ____type: "uuid"
+                        defaultValue: onmutil.uuidNull
+        }
+
+        {
+            namespaceType: "extensionPoint"
+            jsonTag: "inputPinInstances"
+            ____label: "Input Pin Instances"
+            ____description: "Input pin instances collection"
+            componentArchetype:
+                namespaceType: "component"
+                jsonTag: "inputPinInstance"
+                ____label: "Input Pin Instance"
+                ____description: "Input pin instance identifier pair."
+                namespaceProperties:
+                    userMutable:
+                        systemInstanceUuid:
+                            ____type: "uuid"
+                            defaultValue: onmutil.uuidNull
+                        pinInstanceUuid:
+                            ____type: "uuid"
+                            defaultValue: onmutil.uuidNull
+
+        }
+
     ] # node subMenus
 }
 
