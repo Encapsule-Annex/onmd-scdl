@@ -1,6 +1,6 @@
 {
   "name": "onmd-scdl",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An onm data model declaration for Soft Circuit Description Langauge (SCDL).",
   "main": "index.js",
   "scripts": {

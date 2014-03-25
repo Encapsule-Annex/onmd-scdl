@@ -16,9 +16,9 @@
     subNamespaces: [
       {
         namespaceType: "child",
-        jsonTag: "outputPinInstance",
-        ____label: "Output Pin Instance",
-        ____description: "Output pin instance identifier pair.",
+        jsonTag: "sourcePinInstance",
+        ____label: "Source Pin Instance",
+        ____description: "Source pin instance identifier pair.",
         namespaceProperties: {
           userMutable: {
             systemInstanceUuid: {
@@ -33,14 +33,14 @@
         }
       }, {
         namespaceType: "extensionPoint",
-        jsonTag: "inputPinInstances",
-        ____label: "Input Pin Instances",
-        ____description: "Input pin instances collection",
+        jsonTag: "sinkPinInstances",
+        ____label: "Sink Pin Instances",
+        ____description: "Sink pin instances collection",
         componentArchetype: {
           namespaceType: "component",
-          jsonTag: "inputPinInstance",
-          ____label: "Input Pin Instance",
-          ____description: "Input pin instance identifier pair.",
+          jsonTag: "sinkPinInstance",
+          ____label: "Sink Pin Instance",
+          ____description: "Sink pin instance identifier pair.",
           namespaceProperties: {
             userMutable: {
               systemInstanceUuid: {
