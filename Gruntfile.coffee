@@ -8,31 +8,40 @@ module.exports = (grunt) ->
         coffee:
             debug:
                 files:
-                    'dist/node/scdl.js': 'src/scdl.coffee'
-                    'dist/node/scdl-semantic-bindings.js': 'src/scdl-semantic-bindings.coffee'
-                    'dist/node/scdl-catalogue.js': 'src/scdl-catalogue.coffee'
-                    'dist/node/scdl-common-properties.js': 'src/scdl-common-properties.coffee'
-                    'dist/node/scdl-specification.js': 'src/scdl-specification.coffee'
-                    'dist/node/scdl-system.js': 'src/scdl-system.coffee'
-                    'dist/node/scdl-socket.js': 'src/scdl-socket.coffee'
-                    'dist/node/scdl-contract.js': 'src/scdl-contract.coffee'
-                    'dist/node/scdl-machine.js': 'src/scdl-machine.coffee'
-                    'dist/node/scdl-type.js': 'src/scdl-type.coffee'
-                    'dist/node/scdl-pins.js': 'src/scdl-pins.coffee'
-                    'dist/node/scdl-nodes.js': 'src/scdl-nodes.coffee'
-                    'dist/node/scdl-person.js': 'src/scdl-person.coffee'
-                    'dist/node/scdl-organization.js': 'src/scdl-person.coffee'
-                    'dist/node/scdl-copyright.js': 'src/scdl-copyright.coffee'
-                    'dist/node/scdl-license.js': 'src/scdl-license.coffee'
+                    'dist/data-model/scdl.js':                                'src/data-model/scdl.coffee'
+                    'dist/data-model/scdl-semantic-bindings.js':              'src/data-model/scdl-semantic-bindings.coffee'
+                    'dist/data-model/scdl-catalogue.js':                      'src/data-model/scdl-catalogue.coffee'
+                    'dist/data-model/scdl-common-properties.js':               'src/data-model/scdl-common-properties.coffee'
+                    'dist/data-model/scdl-specification.js':                   'src/data-model/scdl-specification.coffee'
+                    'dist/data-model/scdl-system.js':                          'src/data-model/scdl-system.coffee'
+                    'dist/data-model/scdl-socket.js':                          'src/data-model/scdl-socket.coffee'
+                    'dist/data-model/scdl-contract.js':                        'src/data-model/scdl-contract.coffee'
+                    'dist/data-model/scdl-machine.js':                         'src/data-model/scdl-machine.coffee'
+                    'dist/data-model/scdl-type.js':                            'src/data-model/scdl-type.coffee'
+                    'dist/data-model/scdl-pins.js':                            'src/data-model/scdl-pins.coffee'
+                    'dist/data-model/scdl-nodes.js':                           'src/data-model/scdl-nodes.coffee'
+                    'dist/data-model/scdl-person.js':                          'src/data-model/scdl-person.coffee'
+                    'dist/data-model/scdl-organization.js':                    'src/data-model/scdl-person.coffee'
+                    'dist/data-model/scdl-copyright.js':                       'src/data-model/scdl-copyright.coffee'
+                    'dist/data-model/scdl-license.js':                         'src/data-model/scdl-license.coffee'
+                    'dist/crud-api/scdl-store-api.js':                        'src/crud-api/scdl-store-api.coffee'
+                    'dist/crud-api/scdl-store-selector-api.js':               'src/crud-api/scdl-store-selector-api.coffee'
+                    'dist/crud-api/scdl-catalogue-api.js':                    'src/crud-api/scdl-catalogue-api.coffee'
+                    'dist/crud-api/scdl-type-api.js':                         'src/crud-api/scdl-type-api.coffee'
+                    'dist/crud-api/scdl-system-api.js':                       'src/crud-api/scdl-system-api.coffee'
+                    'dist/crud-api/scdl-system-pin-api.js':                   'src/crud-api/scdl-system-pin-api.coffee'
+                    'dist/crud-api/scdl-system-subnode-api.js':               'src/crud-api/scdl-system-subnode-api.coffee'
+                    'dist/crud-api/scdl-system-subsystem-api.js':             'src/crud-api/scdl-system-subsystem-api.coffee'
+                    'dist/crud-api/scdl-system-subsystem-pin-api.js':         'src/crud-api/scdl-system-subsystem-pin-api.coffee'
 
         jshint:
             options: {}
-            files: [ 'index.js', './dist/*.js', './dist/**/*.js' ]
+            files: [ 'index.js', './dist/*.js', './dist/**/*.js', './dist/**/**/*.js' ]
 
         mochaTest:
             options:
                 reporter: 'spec'
-            src: [ 'test/test-onmd-scdl.js' ]
+            src: [ 'test/tests.js' ]
 
         clean: [ 'dist' ]
 

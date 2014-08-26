@@ -1,10 +1,10 @@
 {
   "name": "onmd-scdl",
-  "version": "0.0.10",
+  "version": "0.1.00",
   "description": "Encapsule Project Soft Circuit Description Langauge (SCDL) onm data model declaration.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec test/test-onmd-scdl.js"
+    "test": "mocha -R spec test/tests.js"
   },
   "repository": {
     "type": "git",

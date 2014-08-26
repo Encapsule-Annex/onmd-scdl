@@ -1,17 +1,17 @@
-var chai = require('chai');
-var assert = chai.assert;
-var expect = chai.expect;
-var should = chai.should;
+
+var assert = require('chai').assert;
+var expect = require('chai').expect;
+var should = require('chai').should;
 
 var onm = require('onm');
-var onmdScdl = require('../index');
+var onmdScdlExports = require('../index');
 
 describe("Parse and load the SCDL data model declaration by constructing a new onm.Model object instance", function() {
 
     var model = null;
 
     before(function() {
-        model = new onm.Model(onmdScdl.DataModel);
+        model = new onm.Model(onmdScdlExports.dataModelDeclaration);
     });
 
     it("The onm data model should have loaded without error", function() {
