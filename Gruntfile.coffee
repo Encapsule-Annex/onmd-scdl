@@ -25,11 +25,24 @@ module.exports = (grunt) ->
                     'dist/node/scdl-copyright.js': 'src/scdl-copyright.coffee'
                     'dist/node/scdl-license.js': 'src/scdl-license.coffee'
 
+        jshint:
+            options: {}
+            files: [ 'index.js', './dist/*.js', './dist/**/*.js' ]
+
+        mochaTest:
+            options:
+                reporter: 'spec'
+            src: [ 'test/test-onmd-scdl.js' ]
+
         clean: [ 'dist' ]
 
     grunt.initConfig configObject
 
-    grunt.loadNpmTasks "grunt-contrib-coffee"
     grunt.loadNpmTasks "grunt-contrib-clean"
+    grunt.loadNpmTasks "grunt-contrib-coffee"
+    grunt.loadNpmTasks "grunt-contrib-jshint"
+    grunt.loadNpmTasks "grunt-mocha-test"
 
-    grunt.registerTask "default", [ "clean", "coffee:debug" ]
+    grunt.registerTask "lint", [ "jshint" ]
+    grunt.registerTask "test", [ "mochaTest" ]
+    grunt.registerTask "default", [ "clean", "coffee:debug", "lint", "test" ]

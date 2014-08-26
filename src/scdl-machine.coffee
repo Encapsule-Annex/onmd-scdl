@@ -13,8 +13,11 @@ module.exports = {
     } # namespaceProperties
 
     subNamespaces: [
+        # object-level re-use via require inclusion.
         pins.InputPins
         pins.OutputPins
+
+        # another object. this time, declared inline.
         {
             namespaceType: "extensionPoint"
             jsonTag: "states"
@@ -51,6 +54,11 @@ module.exports = {
                     } # userMutable
                 } # state namespaceProperties
 
+                # We're still in the scope of the 'state' component's root namespace.
+                # An instance of 'state' (i.e. actual data) represents itself, and via
+                # containment of the 'transitions' extension point (i.e. a homogeneous
+                # dictionary collection of sub-objects extensible via the onm API),
+                # defines a set of zero or more 'transition' objects.
                 subNamespaces: [
                     {
                         namespaceType: "extensionPoint"
@@ -58,6 +66,10 @@ module.exports = {
                         ____label: "Transitions"
                         ____description: "SCDL state transition descriptors."
                         componentArchetype: {
+                            # The 'transition' component represents the possibility of
+                            # a state transition between the parent 'state' component and
+                            # the 'state' component referenced by the 'finalState' value
+                            # that may occur iff 'vectorExpression' evaluates true.
                             namespaceType: "component"
                             jsonTag: "transition"
                             ____label: "Transition"
