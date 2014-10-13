@@ -88,51 +88,6 @@ module.exports = {
                 } # types
             ] # Models submenus
         } # Models
-        {
-            namespaceType: "child"
-            jsonTag: "resources"
-            ____label: "Resources"
-            ____description: "SCDL common resource namespace."
-            subNamespaces: [
-                {
-                    namespaceType: "child"
-                    jsonTag: "attribution"
-                    ____label: "Attribution"
-                    ____description: "Shared attribution namespace."
-
-                    subNamespaces: [
-                        {
-                            namespaceType: "extensionPoint"
-                            jsonTag: "people"
-                            ____label: "People"
-                            ____description: "SCDL person models."
-                            componentArchetype: require('./scdl-person')
-                        } # people
-                        {
-                            namespaceType: "extensionPoint"
-                            jsonTag: "organizations"
-                            ____label: "Organizations"
-                            ____description: "SCDL organization models."
-                            componentArchetype: require('./scdl-organization')
-                        } # organizations
-                        {
-                            namespaceType: "extensionPoint"
-                            jsonTag: "licenses"
-                            ____label: "Licenses"
-                            ____description: "SCDL license models."
-                            componentArchetype: require('./scdl-license')
-                        } # licenses
-                        {
-                            namespaceType: "extensionPoint"
-                            jsonTag: "copyrights"
-                            ____label: "Copyrights"
-                            ____description: "SCDL copyright models."
-                            componentArchetype: require('./scdl-copyright')
-                        } # copyrights
-                    ] # assets submenu
-                } # assets
-            ] # attribution subMenus
-        } # attribution
     ] # Catalogue submenus
 } # Catalogue archetype
 

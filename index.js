@@ -16,11 +16,8 @@ module.exports = {
         Socket:                require('./dist/data-model/scdl-socket'),
         Contract:              require('./dist/data-model/scdl-contract'),
         Machine:               require('./dist/data-model/scdl-machine'),
-        Type:                  require('./dist/data-model/scdl-type'),
-        Person:                require('./dist/data-model/scdl-person'),
-        Organization:          require('./dist/data-model/scdl-organization'),
-        Copyright:             require('./dist/data-model/scdl-copyright'),
-        License:               require('./dist/data-model/scdl-license')
+        Pins:                  require('./dist/data-model/scdl-pins'),
+        Type:                  require('./dist/data-model/scdl-type')
     },
 
     // A simple helper API over the generic onm API's that simplify client code
