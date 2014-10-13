@@ -45,34 +45,14 @@
       ____type: "string",
       defaultValue: ""
     },
-    tags: {
-      ____type: "stringCSV",
-      defaultValue: ""
-    },
-    author: {
-      ____type: "uuidSelection",
-      ____selectionSource: "schema.catalogues.catalogue.assets.people",
-      defaultValue: onmutil.uuidNull
-    },
-    organization: {
-      ____type: "uuidSelection",
-      ____selectionSource: "schema.catalogues.catalogue.assets.organizations",
-      defaultValue: onmutil.uuidNull
-    },
-    copyright: {
-      ____type: "uuidSelection",
-      ____selectionSource: "schema.catalogues.catalogue.assets.copyrights",
-      defaultValue: onmutil.uuidNull
-    },
-    license: {
-      ____type: "uuidSelection",
-      ____selectionSource: "schema.catalogues.catalogue.assets.licenses",
-      defaultValue: onmutil.uuidNull
-    },
     platformBinding: {
       ____type: "uuid",
       ____optional: true,
       defaultValue: void 0
+    },
+    tags: {
+      ____type: "stringCSV",
+      defaultValue: ""
     }
   };
 
