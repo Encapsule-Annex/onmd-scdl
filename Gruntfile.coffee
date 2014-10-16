@@ -1,5 +1,3 @@
-#
-
 module.exports = (grunt) ->
 
     configObject =
@@ -11,19 +9,15 @@ module.exports = (grunt) ->
                     'dist/data-model/scdl.js':                                'src/data-model/scdl.coffee'
                     'dist/data-model/scdl-semantic-bindings.js':              'src/data-model/scdl-semantic-bindings.coffee'
                     'dist/data-model/scdl-catalogue.js':                      'src/data-model/scdl-catalogue.coffee'
-                    'dist/data-model/scdl-common-properties.js':               'src/data-model/scdl-common-properties.coffee'
-                    'dist/data-model/scdl-specification.js':                   'src/data-model/scdl-specification.coffee'
-                    'dist/data-model/scdl-system.js':                          'src/data-model/scdl-system.coffee'
-                    'dist/data-model/scdl-socket.js':                          'src/data-model/scdl-socket.coffee'
-                    'dist/data-model/scdl-contract.js':                        'src/data-model/scdl-contract.coffee'
-                    'dist/data-model/scdl-machine.js':                         'src/data-model/scdl-machine.coffee'
-                    'dist/data-model/scdl-type.js':                            'src/data-model/scdl-type.coffee'
-                    'dist/data-model/scdl-pins.js':                            'src/data-model/scdl-pins.coffee'
-                    'dist/data-model/scdl-nodes.js':                           'src/data-model/scdl-nodes.coffee'
-                    'dist/data-model/scdl-person.js':                          'src/data-model/scdl-person.coffee'
-                    'dist/data-model/scdl-organization.js':                    'src/data-model/scdl-person.coffee'
-                    'dist/data-model/scdl-copyright.js':                       'src/data-model/scdl-copyright.coffee'
-                    'dist/data-model/scdl-license.js':                         'src/data-model/scdl-license.coffee'
+                    'dist/data-model/scdl-common-properties.js':              'src/data-model/scdl-common-properties.coffee'
+                    'dist/data-model/scdl-specification.js':                  'src/data-model/scdl-specification.coffee'
+                    'dist/data-model/scdl-system.js':                         'src/data-model/scdl-system.coffee'
+                    'dist/data-model/scdl-socket.js':                         'src/data-model/scdl-socket.coffee'
+                    'dist/data-model/scdl-contract.js':                       'src/data-model/scdl-contract.coffee'
+                    'dist/data-model/scdl-machine.js':                        'src/data-model/scdl-machine.coffee'
+                    'dist/data-model/scdl-type.js':                           'src/data-model/scdl-type.coffee'
+                    'dist/data-model/scdl-pins.js':                           'src/data-model/scdl-pins.coffee'
+                    'dist/data-model/scdl-nodes.js':                          'src/data-model/scdl-nodes.coffee'
                     'dist/crud-api/scdl-store-api.js':                        'src/crud-api/scdl-store-api.coffee'
                     'dist/crud-api/scdl-store-selector-api.js':               'src/crud-api/scdl-store-selector-api.coffee'
                     'dist/crud-api/scdl-catalogue-api.js':                    'src/crud-api/scdl-catalogue-api.coffee'
