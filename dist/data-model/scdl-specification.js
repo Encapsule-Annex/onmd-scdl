@@ -1,7 +1,9 @@
 (function() {
-  var onmutil;
+  var common, onmutil;
 
   onmutil = require('onm').util;
+
+  common = require('./scdl-common-properties');
 
   module.exports = {
     namespaceType: "component",
@@ -9,7 +11,7 @@
     ____label: "Specification",
     ____description: "SCDL specification.",
     namespaceProperties: {
-      userImmutable: require('./scdl-common-properties').CommonProperties,
+      userImmutable: common.ImmutableProperties,
       userMutable: {
         name: {
           ____type: "string",

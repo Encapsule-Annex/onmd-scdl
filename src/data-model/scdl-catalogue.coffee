@@ -1,5 +1,6 @@
 
 util = require('onm').util
+common = require('./scdl-common-properties')
 
 module.exports = {
 
@@ -8,7 +9,7 @@ module.exports = {
     ____label: "Catalogue"
     ____description: "SCDL Model Catalogue object."
     namespaceProperties: {
-        userImmutable: require('./scdl-common-properties')
+        userImmutable: common.ImmutableProperties
         userMutable: {
             name: {
                 ____type: "string"
