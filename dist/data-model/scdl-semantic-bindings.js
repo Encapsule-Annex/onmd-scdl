@@ -28,11 +28,11 @@
       label = ((dataReference_.name != null) && dataReference_.name) || ((dataReference_.uuid != null) && dataReference_.uuid && ("" + model.____label + " " + dataReference_.uuid)) || model.____label;
       return label;
     },
-    setUniqueKey: function(dataReference_) {
+    setUniqueKey: function(dataReference_, keyOverride_) {
       /*jshint eqnull: true*/
 
       if (!((dataReference_.uuid != null) && dataReference_.uuid)) {
-        dataReference_.uuid = uuid.v4();
+        dataReference_.uuid = (keyOverride_ != null) && keyOverride_ || uuid.v4();
       }
       return dataReference_.uuid;
     },
