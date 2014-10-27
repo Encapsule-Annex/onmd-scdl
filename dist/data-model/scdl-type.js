@@ -15,21 +15,15 @@
       userMutable: {
         name: {
           ____type: "string",
-          fnCreate: function() {
-            return "";
-          }
+          defaultValue: ''
         },
         description: {
           ____type: "string",
-          fnCreate: function() {
-            return "";
-          }
+          defaultValue: ''
         },
         tags: {
           ____type: "stringCSV",
-          fnCreate: function() {
-            return "";
-          }
+          defaultValue: ''
         },
         platformBinding: {
           ____type: "uuid",

@@ -12,15 +12,15 @@ module.exports = {
         userMutable: {
             name: {
                 ____type: "string"
-                fnCreate: -> ""
+                defaultValue: ''
             }
             description: {
                 ____type: "string"
-                fnCreate: -> ""
+                defaultValue: ''
             }
             tags: {
                 ____type: "stringCSV"
-                fnCreate: -> ""
+                defaultValue: ''
             }
             platformBinding: {
                 ____type: "uuid"

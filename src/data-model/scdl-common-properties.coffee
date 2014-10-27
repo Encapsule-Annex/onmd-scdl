@@ -7,33 +7,38 @@ module.exports =
     ImmutableProperties:
         uuid:
             ____type: "uuid"
-            fnCreate: -> uuid.v4()
+            defaultValue: ''
 
         uuidRevision:
             ____type: "uuid"
-            fnCreate: -> uuid.v4()
+            defaultValue: ''
 
         revision:
             ____type: "revision"
             defaultValue:  0
+
         createTime:
             ____type: "epochTime"
-            fnCreate: -> onmutil.getEpochTime()
+            defaultValue: 0
+
         updateTime:
             ____type: "epochTime"
-            fnCreate: -> onmutil.getEpochTime()
+            defaultValue: 0
 
     MutableProperties:
         name:
             ____type: "string"
             defaultValue: ""
+
         description:
             ____type: "string"
             defaultValue: ""
+
         platformBinding:
             ____type: "uuid"
             ____optional: true
             defaultValue:  undefined
+
         tags:
             ____type: "stringCSV"
             defaultValue: ""

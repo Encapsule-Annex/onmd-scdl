@@ -9,15 +9,11 @@
     ImmutableProperties: {
       uuid: {
         ____type: "uuid",
-        fnCreate: function() {
-          return uuid.v4();
-        }
+        defaultValue: ''
       },
       uuidRevision: {
         ____type: "uuid",
-        fnCreate: function() {
-          return uuid.v4();
-        }
+        defaultValue: ''
       },
       revision: {
         ____type: "revision",
@@ -25,15 +21,11 @@
       },
       createTime: {
         ____type: "epochTime",
-        fnCreate: function() {
-          return onmutil.getEpochTime();
-        }
+        defaultValue: 0
       },
       updateTime: {
         ____type: "epochTime",
-        fnCreate: function() {
-          return onmutil.getEpochTime();
-        }
+        defaultValue: 0
       }
     },
     MutableProperties: {
