@@ -31,34 +31,6 @@
             return "";
           }
         },
-        author: {
-          ____type: "uuidSelection",
-          ____selectionSource: "schema.catalogues.catalogue.assets.people",
-          fnCreate: function() {
-            return onm.util.uuidNull;
-          }
-        },
-        organization: {
-          ____type: "uuidSelection",
-          ____selectionSource: "schema.catalogues.catalogue.assets.organizations",
-          fnCreate: function() {
-            return onm.util.uuidNull;
-          }
-        },
-        copyright: {
-          ____type: "uuidSelection",
-          ____selectionSource: "schema.catalogues.catalogue.assets.copyrights",
-          fnCreate: function() {
-            return onm.util.uuidNull;
-          }
-        },
-        license: {
-          ____type: "uuidSelection",
-          ____selectionSource: "schema.catalogues.catalogue.assets.licenses",
-          fnCreate: function() {
-            return onm.util.uuidNull;
-          }
-        },
         platformBinding: {
           ____type: "uuid",
           fnCreate: function() {
