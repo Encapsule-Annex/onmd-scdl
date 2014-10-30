@@ -1,0 +1,4 @@
+// intrinsic-scdl-type-injector.js
+//
+
+var injectSCDLTypeModelsIntoSCDLCatalogue = function (namespaceCatalogue_

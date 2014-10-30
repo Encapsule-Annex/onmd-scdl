@@ -37,7 +37,15 @@ module.exports = {
         SCDLInputPinInstance:  require('./dist/crud-api/scdl-system-subsystem-pin-api').SCDLInputPinInstance,
         SCDLOutputPinInstance: require('./dist/crud-api/scdl-system-subsystem-pin-api').SCDLOutputPinInstance,
         SCDLSubnode:           require('./dist/crud-api/scdl-system-subnode-api')
+    },
+
+    intrinsics: {
+        createIntrinsicSCDLStore: require('./src/intrinsics/intrinsic-scdl-store-factory'),
+        properties: {
+            typeModels: require('./src/intrinsics/intrinsic-scdl-type-properties')
+        }
     }
+
 
 };
 
