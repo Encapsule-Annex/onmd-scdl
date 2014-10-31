@@ -25,6 +25,8 @@ var createIntrinsicSCDLStore = function() {
         scdlStore.createComponent(addressNewSCDLType, [ value.uuid ], value);
     }
 
+    return scdlStore;
+
 };
 
 module.exports = createIntrinsicSCDLStore;
