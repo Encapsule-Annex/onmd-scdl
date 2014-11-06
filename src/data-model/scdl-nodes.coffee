@@ -1,6 +1,6 @@
 
 onmutil = require('onm').util
-common = require('./scdl-common-properties')
+commonProperties = require('./scdl-common-properties')
 
 Node = {
     namespaceType: "component"
@@ -9,7 +9,7 @@ Node = {
     ____description: "SCDL node object."
 
     namespaceProperties:
-        userImmutable: common.ImmutableProperties
+        userImmutable: commonProperties.ImmutableProperties
 
     subNamespaces: [
         {
@@ -38,6 +38,7 @@ Node = {
                 ____label: "Sink Pin Instance"
                 ____description: "Sink pin instance identifier pair."
                 namespaceProperties:
+                    userImmutable: commonProperties.ImmutableProperties
                     userMutable:
                         systemInstanceUuid:
                             ____type: "uuid"

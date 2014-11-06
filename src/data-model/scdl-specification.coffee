@@ -1,5 +1,6 @@
+
 onmutil = require('onm').util
-common = require('./scdl-common-properties')
+commonProperties = require('./scdl-common-properties')
 
 module.exports = {
     namespaceType: "component"                                                                             
@@ -7,7 +8,7 @@ module.exports = {
     ____label: "Specification"
     ____description: "SCDL specification."
     namespaceProperties: {
-        userImmutable:  common.ImmutableProperties
+        userImmutable: commonProperties.ImmutableProperties
         userMutable: {
             name: {
                 ____type: "string"
@@ -55,7 +56,7 @@ module.exports = {
                 ____label: "System Instance"
                 ____description: "SCDL system model instance."
                 namespaceProperties: {
-                    userImmutable: require('./scdl-common-properties').CommonProperties
+                    userImmutable: commonProperties.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -98,7 +99,7 @@ module.exports = {
                             ____label: "Socket Instance"
                             ____description: "SCDL socket model instance."
                             namespaceProperties: {
-                                userImmutable: require('./scdl-common-properties').CommonProperties
+                                userImmutable: commonProperties.ImmutableProperties
                                 userMutable: {
                                     name: {
                                         ____type: "string"
@@ -141,7 +142,7 @@ module.exports = {
                                         ____label: "Instance Binding"
                                         ____description: "SCDL socket model instance binding."
                                         namespaceProperties: {
-                                            userImmutable: require('./scdl-common-properties').CommonProperties
+                                            userImmutable: commonProperties.ImmutableProperties
                                             userMutable: {
                                                 name: {
                                                     ____type: "string"

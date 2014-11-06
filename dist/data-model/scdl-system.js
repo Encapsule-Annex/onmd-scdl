@@ -1,9 +1,9 @@
 (function() {
-  var common, onm, pins;
+  var commonProperties, onm, pins;
 
   onm = require('onm');
 
-  common = require('./scdl-common-properties');
+  commonProperties = require('./scdl-common-properties');
 
   pins = require('./scdl-pins');
 
@@ -13,8 +13,8 @@
     ____label: "System",
     ____description: "SCDL system model.",
     namespaceProperties: {
-      userImmutable: common.ImmutableProperties,
-      userMutable: common.MutableProperties
+      userImmutable: commonProperties.ImmutableProperties,
+      userMutable: commonProperties.MutableProperties
     },
     subNamespaces: [
       pins.InputPins, pins.OutputPins, {
@@ -28,7 +28,7 @@
           ____label: "System Instance",
           ____description: "Contained SCDL system instance.",
           namespaceProperties: {
-            userImmutable: common.ImmutableProperties,
+            userImmutable: commonProperties.ImmutableProperties,
             userMutable: {
               name: {
                 ____type: "string",
@@ -69,7 +69,7 @@
           ____label: "Machine Instance",
           ____description: "SCDL machine instance.",
           namespaceProperties: {
-            userImmutable: common.ImmutableProperties,
+            userImmutable: commonProperties.ImmutableProperties,
             userMutable: {
               name: {
                 ____type: "string",
@@ -110,7 +110,7 @@
           ____label: "Socket Instance",
           ____description: "SCDL socket instance.",
           namespaceProperties: {
-            userImmutable: common.ImmutableProperties,
+            userImmutable: commonProperties.ImmutableProperties,
             userMutable: {
               name: {
                 ____type: "string",

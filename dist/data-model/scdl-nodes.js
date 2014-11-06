@@ -1,9 +1,9 @@
 (function() {
-  var Node, common, onmutil;
+  var Node, commonProperties, onmutil;
 
   onmutil = require('onm').util;
 
-  common = require('./scdl-common-properties');
+  commonProperties = require('./scdl-common-properties');
 
   Node = {
     namespaceType: "component",
@@ -11,7 +11,7 @@
     ____label: "Node",
     ____description: "SCDL node object.",
     namespaceProperties: {
-      userImmutable: common.ImmutableProperties
+      userImmutable: commonProperties.ImmutableProperties
     },
     subNamespaces: [
       {
@@ -42,6 +42,7 @@
           ____label: "Sink Pin Instance",
           ____description: "Sink pin instance identifier pair.",
           namespaceProperties: {
+            userImmutable: commonProperties.ImmutableProperties,
             userMutable: {
               systemInstanceUuid: {
                 ____type: "uuid",

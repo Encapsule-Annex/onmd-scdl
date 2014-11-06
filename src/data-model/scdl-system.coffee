@@ -1,6 +1,6 @@
 
 onm = require('onm')
-common = require('./scdl-common-properties')
+commonProperties = require('./scdl-common-properties')
 
 pins = require('./scdl-pins')
 
@@ -11,8 +11,8 @@ module.exports = {
     ____label: "System"
     ____description: "SCDL system model."
     namespaceProperties: {
-        userImmutable: common.ImmutableProperties
-        userMutable: common.MutableProperties
+        userImmutable: commonProperties.ImmutableProperties
+        userMutable: commonProperties.MutableProperties
     }
 
     subNamespaces: [
@@ -31,7 +31,7 @@ module.exports = {
                 ____label: "System Instance"
                 ____description: "Contained SCDL system instance."
                 namespaceProperties: {
-                    userImmutable: common.ImmutableProperties
+                    userImmutable: commonProperties.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -66,7 +66,7 @@ module.exports = {
                 ____label: "Machine Instance"
                 ____description: "SCDL machine instance."
                 namespaceProperties: {
-                    userImmutable: common.ImmutableProperties
+                    userImmutable: commonProperties.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"
@@ -103,7 +103,7 @@ module.exports = {
                 ____label: "Socket Instance"
                 ____description: "SCDL socket instance."
                 namespaceProperties: {
-                    userImmutable: common.ImmutableProperties
+                    userImmutable: commonProperties.ImmutableProperties
                     userMutable: {
                         name: {
                             ____type: "string"

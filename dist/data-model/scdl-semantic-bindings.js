@@ -28,6 +28,7 @@
       label = ((dataReference_.name != null) && dataReference_.name) || ((dataReference_.uuid != null) && dataReference_.uuid && ("" + model.____label + " " + dataReference_.uuid)) || model.____label;
       return label;
     },
+    keyPropertyName: 'uuid',
     setUniqueKey: function(dataReference_, keyOverride_) {
       /*jshint eqnull: true*/
 

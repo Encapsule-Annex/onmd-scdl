@@ -21,6 +21,8 @@ module.exports =
             (dataReference_.uuid? and dataReference_.uuid and "#{model.____label} #{dataReference_.uuid}") or model.____label
         return label
 
+    keyPropertyName: 'uuid'
+
     setUniqueKey: (dataReference_, keyOverride_) ->
         ###jshint eqnull: true###
         if not (dataReference_.uuid? and dataReference_.uuid)
