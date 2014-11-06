@@ -7,11 +7,11 @@ module.exports =
     ImmutableProperties:
         uuid:
             ____type: "uuid"
-            defaultValue: ''
+            defaultValue: undefined
 
         uuidRevision:
             ____type: "uuid"
-            defaultValue: ''
+            defaultValue: undefined
 
         revision:
             ____type: "revision"

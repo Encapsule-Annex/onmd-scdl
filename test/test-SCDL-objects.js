@@ -1,4 +1,5 @@
-// scdl-api-tests.js
+// test-SCDL-objects.js
+// SCDL CRUD API tests.
 
 var scdlStoreApiTest = require('./test-SCDLStore-object');
 var scdlStoreSelectorApiTest = require('./test-SCDLStoreSelector-object');

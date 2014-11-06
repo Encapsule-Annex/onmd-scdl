@@ -9,11 +9,11 @@
     ImmutableProperties: {
       uuid: {
         ____type: "uuid",
-        defaultValue: ''
+        defaultValue: void 0
       },
       uuidRevision: {
         ____type: "uuid",
-        defaultValue: ''
+        defaultValue: void 0
       },
       revision: {
         ____type: "revision",
