@@ -33,6 +33,6 @@
   "dependencies": {
     "node-uuid": "~1.4.1",
     "chai": "^1.9.1",
-    "onm": "git://github.com/Encapsule/onm#test/rc/v0.3.1"
+    "onm": "git://github.com/Encapsule/onm#test/rc/v0.3"
   }
 }
