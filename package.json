@@ -1,6 +1,6 @@
 {
   "name": "onmd-scdl",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Encapsule Project Soft Circuit Description Langauge (SCDL) onm data model declaration.",
   "main": "index.js",
   "scripts": {
