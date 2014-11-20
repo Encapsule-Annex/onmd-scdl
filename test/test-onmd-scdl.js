@@ -4,12 +4,11 @@ var assert = chai.assert;
 var expect = chai.expect;
 var should = chai.should;
 
-var testDataModelDeclaration = require('onm/test/fixture/test-shared-onmd-generic-suite');
 var SCDLDataModelDeclaration = require('../index').dataModelDeclaration;
-
+var validateDataModelDeclaration = require('onm-data-model-tests')().validateDataModelDeclaration;
 
 describe("onmd-scdl module tests", function() {
-    testDataModelDeclaration(SCDLDataModelDeclaration);
+    validateDataModelDeclaration(SCDLDataModelDeclaration);
     require('./test-SCDL-objects');
     require('./test-intrinsic-scdl-store-factory');
 });

@@ -1,6 +1,6 @@
 {
   "name": "onmd-scdl",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Encapsule Project Soft Circuit Description Langauge (SCDL) onm data model declaration.",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,8 @@
     "grunt-contrib-jshint": "^0.10.0",
     "mocha": "^2.0.1",
     "chai": "^1.9.1",
-    "leche": "^1.0.1"
+    "leche": "^1.0.1",
+    "onm-data-model-tests": "git://github.com/Encapsule/onm-data-model-tests#test/rc/v0.1"
   },
   "dependencies": {
     "node-uuid": "~1.4.1",
